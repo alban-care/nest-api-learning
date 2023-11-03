@@ -6,7 +6,7 @@ export class User {
   readonly id: number;
 
   @Column()
-  readonly name: string;
+  readonly username: string;
 
   @Column({
     unique: true,

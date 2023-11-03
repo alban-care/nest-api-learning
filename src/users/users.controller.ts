@@ -7,12 +7,12 @@ export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
   @Get('/')
-  findAll(): any[] {
-    return this.usersService.findAll();
+  async findAll() {
+    return await this.usersService.findAll();
   }
 
-  @Post()
-  create(@Body() user: UserDto): any {
-    return this.usersService.create(user);
+  @Post('/')
+  async create(@Body() user: UserDto) {
+    return await this.usersService.create(user);
   }
 }
